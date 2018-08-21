@@ -12,6 +12,9 @@ var connection = mysql.createConnection({
     database : 'postgres'
 });
 
+// require('mysql') -> require('pg') will be better choice to connect postgres.
+// ( npm install pg@6.1.0 --save  ) is needed.
+
 connection.connect();
 
 connection.query('SELECT * from finance_list', function(err, rows, fields) {
